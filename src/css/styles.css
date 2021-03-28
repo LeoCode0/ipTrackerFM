@@ -21,6 +21,7 @@ body {
   width: 100%;
   height: 250px;
   background: url(../images/pattern-bg.png) no-repeat;
+  background-size: cover;
   text-align: center;
   position: relative;
 }
@@ -34,18 +35,29 @@ body {
 
 .header__input {
   display: flex;
+  width: 90%;
+  max-width: 720px;
   justify-content: center;
-  width: max-content;
   margin: 0 auto;
 }
 
 .header__input input {
-  width: 280px;
+  width: 90%;
   height: 50px;
   padding: 10px 0 10px 10px;
   border: 0;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+.header__input input:hover {
+  cursor: pointer;
+}
+
+.header__input button:hover {
+  cursor: pointer;
 }
 
 .header__input button {
@@ -59,8 +71,9 @@ body {
 .header__results {
   display: flex;
   flex-wrap: wrap;
-  width: 330px;
-  height: 230px;
+  width: 90%;
+  max-width: 1100px;
+  height: 260px;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
@@ -68,7 +81,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   position: absolute;
-  bottom: -50%;
+  bottom: -60%;
   z-index: 9999;
   right: 0;
   left: 0;
@@ -79,9 +92,66 @@ body {
   width: 100%;
   text-align: center;
   color: var(--dark-gray);
-  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.results__name {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.results__result {
+  color: var(--very-dark-gray);
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 5px 0;
 }
 
 #map {
-  height: 200px;
+  height: 100vh;
+}
+
+.error {
+  position: fixed;
+  display: none;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 10px;
+  bottom: 20px;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__results {
+    height: 150px;
+    bottom: -25%;
+  }
+
+  .results__container {
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    width: 25%;
+    border-right: 1px solid var(--dark-gray);
+    text-align: left;
+    padding: 0 20px;
+    justify-content: flex-start;
+  }
+
+  .results__result {
+    margin-top: 5px;
+  }
 }
