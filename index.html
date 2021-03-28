@@ -8,21 +8,37 @@
   <title>Frontend Mentor | IP Address Tracker</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 
 <body>
-
-
-  <!-- 
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC add offset value dynamically using the API
-  ISP -->
+  <header class="header">
+    <div class="header__title">
+      <h1>IP Address Tracker</h1>
+    </div>
+    <div class="header__input">
+      <input type="text" name="ip" id="ip" placeholder="Search for any IP address or domain">
+      <button type="button">></button>
+    </div>
+    <div class="header__results">
+      <div class="results__container">
+        <p class="results__name">IP Address</p>
+        <p class="results__result" id="ip_result"></p>
+      </div>
+      <div class="results__container">
+        <p class="results__name">Location</p>
+        <p class="results__result" id="location_result"></p>
+      </div>
+      <div class="results__container">
+        <p class="results__name">Timezone</p>
+        <p class="results__result" id="timezone_result"></p>
+      </div>
+      <div class="results__container">
+        <p class="results__name">ISP</p>
+        <p class="results__result" id="isp_result"></p>
+      </div>
+    </div>
+  </header>
   <script src="./src/js/index.js"></script>
 </body>
 
