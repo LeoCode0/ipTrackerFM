@@ -16,3 +16,7 @@ html {
 body {
   font-family: "Rubik", sans-serif;
 }
+
+#map {
+  height: 200px;
+}
